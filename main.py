@@ -58,6 +58,7 @@ class TextConfig:
     font_size: float = 5.8
 
     offset_y: float = 1 * mm
+    position_above_qr: bool = True
 
 
 def detect_best_orientation(page: PageConfig, label: LabelConfig) -> Orientation:
@@ -199,7 +200,10 @@ def draw_label(canvas, x, y, value, label_width, label_height, label_cfg: LabelC
 
         text_x = inner_x + (inner_width / 2)
 
-        text_y = inner_y + text_cfg.offset_y
+        if text_cfg.position_above_qr:
+            text_y = qr_y + qr_cfg.height + 1 * mm
+        else:
+            text_y = inner_y + text_cfg.offset_y
 
         canvas.drawCentredString(
             text_x,
