@@ -19,3 +19,16 @@
 10. Each label contains a centered QR code with its text placed below it inside the label.
 
 11. Labels are placed using grid coordinates (row/column -> x, y positions), with row order inverted for correct top-to-bottom printing.
+
+Dimensions:
+
+Label size: 16 mm × 27 mm
+QR size: 12 mm × 12 mm
+Internal padding: 1 mm on all sides
+Left border → QR: 2 mm
+Right border → QR: 2 mm
+Bottom border → QR: 4.5 mm
+Top border → QR: 10.5 mm
+Text gap above QR: 1 mm
+Label-to-label gap: 0 mm horizontally and vertically
+Page margin: 2 mm on all sides
